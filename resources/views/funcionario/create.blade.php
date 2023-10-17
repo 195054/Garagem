@@ -1,12 +1,12 @@
 <body>
         <div class="container">
-            <h1>Novo Cliente</h1>
-            <form action="{{ route('cliente.store') }}" method="POST">
+            <h1>Novo Funcionário</h1>
+            <form action="{{ route('funcionario.store') }}" method="POST">
                 <!-- Token CSRF para proteção contra ataques CSRF -->
                 @csrf
                 <div class="form-group">
-                    <label for="cpf">CPF:</label>
-                    <input type="int" name="cpf">
+                    <label for="matricula">Matricula:</label>
+                    <input type="int" name="matricula">
                 </div>
                 <div class="form-group">
                     <label for="nome">Nome:</label>
@@ -21,7 +21,7 @@
                     <input type="text" name="endereco">
                 </div>
                 <button type="submit" class="btn btn-success">Salvar</button>
-                <a href="{{ route('cliente.index') }}" class="btn btn-secondary">Cancelar</a>
+                <a href="{{ route('autores.index') }}" class="btn btn-secondary">Cancelar</a>
                 </form> 
             </div>
         </body>

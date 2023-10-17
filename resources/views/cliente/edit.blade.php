@@ -43,28 +43,32 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Editar Autor</title>
+        <title>Editar Cliente</title>
     </head>
     <body>
         <div class="container">
-            <h1>Editar Autor</h1>
-            <form action="{{ route('autores.update', $autor->id) }}" method="POST">
+            <h1>Editar Cliente</h1>
+            <form action="{{ route('cliente.update', $cliente->id) }}" method="POST">
                 @csrf
                 @method('PUT')
                 <div class="form-group">
+                    <label for="cpf">CPF:</label>
+                    <input type="int" name="cpf" value="{{ $cliente->cpf }}">
+                </div>
+                <div class="form-group">
                     <label for="nome">Nome:</label>
-                    <input type="text" name="nome" value="{{ $autor->nome }}">
+                    <input type="text" name="nome" value="{{ $cliente->nome }}">
                 </div>
                 <div class="form-group">
-                    <label for="data_nascimento">Data de Nascimento:</label>
-                    <input type="date" name="data_nascimento" value="{{ $autor->data_nascimento }}">
+                    <label for="telefone">Telefone:</label>
+                    <input type="int" name="telefone" value="{{ $cliente->telefone }}">
                 </div>
                 <div class="form-group">
-                    <label for="nacionalidade">Nacionalidade:</label>
-                    <input type="text" name="nacionalidade" value="{{ $autor->nacionalidade }}">
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" name="endereco" value="{{ $cliente->endereco }}">
                 </div>
                 <button type="submit" class="btn btn-success">Salvar Alterações</button>
-                <a href="{{ route('autores.index') }}" class="btn btn-secondary">Cancelar</a>
+                <a href="{{ route('cliente.index') }}" class="btn btn-secondary">Cancelar</a>
             </form>
         </div>
     </body>

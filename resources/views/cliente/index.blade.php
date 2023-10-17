@@ -1,30 +1,30 @@
 <x-app-layout>
-    <link rel="stylesheet" href="{{ asset('css/autores/index.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/cliente/cliente.css') }}">
     <div class="container">
-        {{-- <h1>Lista de Autores</h1> --}}
+        {{-- <h1>Lista de Cliente</h1> --}}
         <br>
-        <a href="{{ route('autores.create') }}" class="btn btn-primary">Novo Autor</a>
+        <a href="{{ route('cliente.create') }}" class="btn btn-primary">Novo Cliente</a>
         <table class="table">
             <thead>
                 <tr>
                     <th>ID</th>
+                    <th>CPF</th>
                     <th>Nome</th>
-                    <th>Data de Nascimento</th>
-                    <th>Nacionalidade</th>
-                    <th>Ações</th>
+                    <th>Telefone</th>
+                    <th>Endereço</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($autores as $autor)
+                @foreach ($cliente as $cliente)
                     <tr>
-                        <td class="colunas">{{ $autor->id }}</td>
-                        <td id="nome">{{ $autor->nome }}</td>
-                        <td class="colunas">{{ date_format(new DateTime($autor->data_nascimento), 'd/m/Y') }}</td>
-                        <td>{{ $autor->nacionalidade }}</td>
+                        <td class="colunas">{{ $cliente->id }}</td>
+                        <td id="nome">{{ $cliente->nome }}</td>
+                        <td id="telefone">{{ $cliente->telefone }}</td>
+                        <td>{{ $cliente->endereco }}</td>
                         <td>
-                            <a href="{{ route('autores.show', $autor->id) }}" class="btn btn-info">Detalhes</a>
-                            <a href="{{ route('autores.edit', $autor->id) }}" class="btn btn-warning">Editar</a>
-                            <form action="{{ route('autores.destroy', $autor->id) }}" method="POST" style="display: inline;">
+                            <a href="{{ route('cliente.show', $cliente->id) }}" class="btn btn-info">Detalhes</a>
+                            <a href="{{ route('cliente.edit', $cliente->id) }}" class="btn btn-warning">Editar</a>
+                            <form action="{{ route('cliente.destroy', $cliente->id) }}" method="POST" style="display: inline;">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">Excluir</button>
