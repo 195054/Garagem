@@ -12,8 +12,10 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        $cliente = Cliente::all();
-        return view('cliente.index', compact('cliente'));
+        $clientes = Cliente::all();
+        $clientes = Cliente::paginate(10);
+
+        return view('clientes.index', compact('clientes'));
     }
 
     /**
@@ -21,7 +23,7 @@ class ClienteController extends Controller
      */
     public function create()
     {
-        return view('cliente.create');
+        return view('clientes.create');
     }
 
     /**
@@ -47,7 +49,7 @@ class ClienteController extends Controller
         // Encontra um autor no banco de dados com o ID fornecido
         $autor = Cliente::findOrFail($id);
         // Retorna a view 'autores.show' e passa o autor como parâmetro
-        return view('cliente.show', compact('cliente'));
+        return view('clientes.show', compact('cliente'));
     }
 
     /**
@@ -58,7 +60,7 @@ class ClienteController extends Controller
         // Encontra um autor no banco de dados com o ID fornecido
         $autor = Cliente::findOrFail($id);
         // Retorna a view 'autores.edit' e passa o autor como parâmetro
-        return view('cliente.edit', compact('cliente'));
+        return view('clientes.edit', compact('cliente'));
     }
 
     /**
@@ -69,10 +71,10 @@ class ClienteController extends Controller
         // Encontra um autor no banco de dados com o ID fornecido
         $autor = Cliente::findOrFail($id);
         // Atualiza os campos do autor com os dados fornecidos no request
-        $autor->nome = $request->input('cpf');
+        $autor->cpf = $request->input('cpf');
         $autor->nome = $request->input('nome');
-        $autor->data_nascimento = $request->input('telefone');
-        $autor->nacionalidade = $request->input('endereco');
+        $autor->telefone = $request->input('telefone');
+        $autor->endereco = $request->input('endereco');
         // Salva as alterações no autor
         $autor->save();
         // Redireciona para a rota 'autores.index' após salvar
@@ -89,6 +91,6 @@ class ClienteController extends Controller
         // Exclui o autor do banco de dados
         $autor->delete();
         // Redireciona para a rota 'autores.index' após excluir
-        return redirect()->route('cliente.index');
+        return redirect()->route('clientes.index');
     }
 }

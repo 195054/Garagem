@@ -48,7 +48,7 @@
     <body>
         <div class="container">
             <h1>Editar Cliente</h1>
-            <form action="{{ route('cliente.update', $cliente->id) }}" method="POST">
+            <form action="{{ route('clientes.update', $cliente->id) }}" method="POST">
                 @csrf
                 @method('PUT')
                 <div class="form-group">
@@ -68,7 +68,7 @@
                     <input type="text" name="endereco" value="{{ $cliente->endereco }}">
                 </div>
                 <button type="submit" class="btn btn-success">Salvar Alterações</button>
-                <a href="{{ route('cliente.index') }}" class="btn btn-secondary">Cancelar</a>
+                <a href="{{ route('clientes.index') }}" class="btn btn-secondary">Cancelar</a>
             </form>
         </div>
     </body>
