@@ -1,7 +1,7 @@
 <x-app-layout>
     <link rel="stylesheet" href="{{ asset('css/clientes/clientes.css') }}">
     <div class="container">
-        {{-- <h1>Lista de Cliente</h1> --}}
+        {{-- <h1>Lista de Clientes</h1> --}}
         <br>
         <a href="{{ route('clientes.create') }}" class="btn btn-primary">Novo Cliente</a>
         <table class="table">
@@ -34,6 +34,6 @@
                 @endforeach
             </tbody>
         </table>
-        {{ $autores->links() }}
+        {{ $clientes->links() }}
     </div>
 </x-app-layout>

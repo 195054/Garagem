@@ -10,7 +10,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('venda', function (Blueprint $table) {
+        Schema::create('vendas', function (Blueprint $table) {
             $table->id();
             $table->date('data_venda');
             $table->float('valor_venda');
@@ -19,8 +19,8 @@ return new class extends Migration
             $table->unsignedBigInteger('id_veiculo');
             $table->timestamps();
 
-            $table->foreign('id_cliente')->references('id')->on('cliente');
-            $table->foreign('id_funcionario')->references('id')->on('funcionario');
+            $table->foreign('id_cliente')->references('id')->on('clientes');
+            $table->foreign('id_funcionario')->references('id')->on('funcionarios');
             $table->foreign('id_veiculo')->references('id')->on('veiculos');
         });
     }
