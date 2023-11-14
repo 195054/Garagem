@@ -18,6 +18,9 @@
                     <x-nav-link :href="route('clientes.index')">
                         {{ __('Cliente') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('funcionarios.index')">
+                        {{ __('Funcionarios') }}
+                    </x-nav-link>
                 </div>
             </div>
 

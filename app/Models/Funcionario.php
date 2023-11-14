@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Funcionario extends Model
 {
-    protected $table = "Funcionario";
+    protected $table = "Funcionarios";
     protected $fillable = ['matricula', 'cargo', 'telefone', 'nome'];
 }

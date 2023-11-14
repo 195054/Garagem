@@ -6,16 +6,16 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Faker\Factory as Faker;
 
-class ClientesTableSeeder extends Seeder
+class FuncionariosTableSeeder extends Seeder
 {
     public function run()
     {
         $faker = Faker::create();
 
-        $numeroDeClientes = 60;
+        $numeroDeFuncionarios = 60;
 
-        for ($i = 0; $i < $numeroDeClientes; $i++) {
-            \DB::table('Clientes')->insert([
+        for ($i = 0; $i < $numeroDeFuncionarios; $i++) {
+            \DB::table('Funcionarios')->insert([
                 'nome' => $faker->name,
                 'data_nascimento' => $faker->date,
                 'nacionalidade' => $faker->country,
@@ -24,4 +24,4 @@ class ClientesTableSeeder extends Seeder
     }
 }
 // Comando para rodar as Seeders
-//php artisan db:seed --class=ClientesTableSeeder
+//php artisan db:seed --class=FuncionariosTableSeeder
