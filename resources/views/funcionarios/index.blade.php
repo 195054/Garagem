@@ -1,5 +1,5 @@
 <x-app-layout>
-    <link rel="stylesheet" href="{{ asset('css/funcionarios/funcionarios.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/funcionarios/index.css') }}">
     <div class="container">
         {{-- <h1>Lista de Funcionarios</h1> --}}
         <br>
@@ -18,9 +18,11 @@
                 @foreach ($funcionarios as $funcionario)
                     <tr>
                         <td class="colunas">{{ $funcionario->id }}</td>
+                        <td id="matricula">{{ $funcionario->matricula }}</td>
                         <td id="nome">{{ $funcionario->nome }}</td>
                         <td id="telefone">{{ $funcionario->telefone }}</td>
-                        <td>{{ $funcionario->endereco }}</td>
+                        <td id="cargo">{{ $funcionario->cargo }}</td>
+                        <td>{{ $funcionario->cargo }}</td>
                         <td>
                             <a href="{{ route('funcionarios.show', $funcionario->id) }}" class="btn btn-info">Detalhes</a>
                             <a href="{{ route('funcionarios.edit', $funcionario->id) }}" class="btn btn-warning">Editar</a>

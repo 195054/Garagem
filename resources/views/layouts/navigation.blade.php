@@ -21,6 +21,12 @@
                     <x-nav-link :href="route('funcionarios.index')">
                         {{ __('Funcionarios') }}
                     </x-nav-link>
+                     <x-nav-link :href="route('veiculos.index')">
+                        {{ __('Veiculos') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('vendas.index')">
+                        {{ __('Vendas') }}
+                    </x-nav-link>
                 </div>
             </div>
 
