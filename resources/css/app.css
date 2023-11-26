@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    background: url("img/paginainicial.png") no-repeat center center;
+    background-size: cover;
+    height: 92vh;
+ }

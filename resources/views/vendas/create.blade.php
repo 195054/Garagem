@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
     <header>
-        <link rel="stylesheet" href="{{ asset('css/vendas/index.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/vendas/create.css') }}">
     </header>
     <div class="container-venda">
         <form action="{{ route('vendas.store') }}" method="POST" class="form-venda">

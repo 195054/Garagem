@@ -1,9 +1,11 @@
 <x-app-layout>
-    <link rel="stylesheet" href="{{ asset('css/clientes/clientes.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/clientes/index.css') }}">
+    <link href="/dist/output.css" rel="stylesheet">
     <div class="container">
         {{-- <h1>Lista de Clientes</h1> --}}
         <br>
         <a href="{{ route('clientes.create') }}" class="btn btn-primary">Novo Cliente</a>
+        <div className="h-screen bg-hero">
         <table class="table">
             <thead>
                 <tr>
@@ -13,6 +15,8 @@
                     <th>Telefone</th>
                     <th>Endereço</th>
                 </tr>
+                <div className="h-screen bg-hero">
+                
             </thead>
             <tbody>
                 @foreach ($clientes as $cliente)
@@ -36,4 +40,5 @@
         </table>
         {{ $clientes->links() }}
     </div>
+    
 </x-app-layout>

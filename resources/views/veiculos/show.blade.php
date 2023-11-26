@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="author-details-layout">
-        <link rel="stylesheet" href="{{ asset('css/veiculos/index.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/veiculos/show.css') }}">
         <h1>Detalhes do Veiculo</h1>
         <ul>
             <li><strong>ID:</strong> {{ $veiculos->id }}</li>

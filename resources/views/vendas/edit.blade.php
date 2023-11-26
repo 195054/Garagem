@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
 
-    <link rel="stylesheet" href="{{ asset('css/vendas/index.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/vendas/edit.css') }}">
 
     <div class="container-venda">
         <form action="{{ route('vendas.update', $venda->id) }}" method="POST" class="form-venda">

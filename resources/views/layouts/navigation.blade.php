@@ -16,7 +16,7 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                     <x-nav-link :href="route('clientes.index')">
-                        {{ __('Cliente') }}
+                        {{ __('Clientes') }}
                     </x-nav-link>
                     <x-nav-link :href="route('funcionarios.index')">
                         {{ __('Funcionarios') }}

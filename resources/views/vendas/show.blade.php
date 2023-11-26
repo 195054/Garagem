@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
 
-    <link rel="stylesheet" href="{{ asset('css/vendas/index.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/vendas/show.css') }}">
 
     <div class="container-venda form-venda">
         <h3>{{ $venda->valor_venda }}</h3>

@@ -1,0 +1,156 @@
+
+.row {
+    margin: 0;
+ }
+ 
+ .container {
+    /* Superior e inferior e zerar laterais */
+    padding: 70px 0;
+ }
+ 
+ p,
+ li {
+    color: #444;
+    font-size: 25px;
+ }
+ 
+ header,
+ .navbar {
+    background-color: #4d4e4e;
+ }
+ 
+ #nav-container {
+    padding-top: 0;
+    padding-bottom: 0;
+ }
+ 
+ 
+ .navbar-brand {
+    padding: 20;
+    color: #fff;
+   top: 30%;
+
+   left: 60%;
+
+   transform: translate(10%);
+ }
+ 
+ .navbar-brand:hover {
+    color: #fff;
+ }
+ 
+ #navbar-links a {
+    color: #fff;
+ }
+ 
+ /* Paddings dos links: */
+ .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 1rem 0.8rem;
+    /* rem trabalha com elemento root, por isso o r */
+    /* se a fonte tiver 14px 1rem significa 14px de padding. */
+    /* .8rem 80% de 14px */
+ }
+ 
+ .img {
+    padding: 20px;
+ }
+ 
+ .navbar-toggler {
+    padding-right: 10px;
+ }
+ 
+ .container-fluid {
+    padding: 1;
+ }
+ 
+ #mainSlider .carousel-inner,
+ #mainSlider .carousel-item {
+    height: 100vh;
+ }
+ 
+ #mainSlider .carousel-caption {
+    top: 30;
+ }
+ 
+ #mainSlider .carousel-caption h2 {
+    font-size: 50px;
+    margin-bottom: 30px;
+ }
+ 
+ #mainSlider .carousel-caption p {
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 100px;
+    /* para descolar do botão */
+    color: white;
+ }
+ 
+ .main-btn {
+    background-color: #65daf9;
+    color: #fff;
+    /*cor fonte branca */
+    text-transform: uppercase;
+    /* tudo maiusculo */
+    width: 200px;
+    height: 60px;
+    padding: 1px 20px;
+    /* para descolar o texto do botão */
+    border-radius: 30px;
+    /*arredondar a borda */
+    border: 3px solid transparent;
+    /*q vai virar azul */
+    transition: 0.5s;
+    /* para ter holding mais suave de 0,5 segundos */
+ }
+ 
+ /* quando o mouse passa sobre */
+ .main-btn:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: transparent;
+    border-color: #65daf9;
+ }
+ 
+ .carousel-indicators .active {
+    background-color: #65daf9;
+ }
+ 
+ #sobre-mim {
+    background-color: #f9f9f9;
+ }
+ 
+ .main-title {
+    color: #444;
+    margin: 0 0 65px 0;
+    /* pra cima, pra direita, pra baixo, pra esquerda */
+    font-size: 40px;
+    text-align: center;
+ }
+ 
+ .about-title {
+    font-size: 17px;
+    color: #444;
+    text-transform: uppercase;
+    font-weight: bold;
+ }
+ 
+ #about-list {
+    list-style: none;
+    padding-left: 0;
+ }
+ 
+ #about-list li {
+    line-height: 30px;
+ }
+ 
+ #about-list i {
+    color: #65daf9;
+    margin-right: 15px;
+ }
+ 
+ .card-body {
+    text-align: center;
+ }
+ 
+ 
+ 
