@@ -24,10 +24,10 @@
                     <tr>
                         <td>{{ $venda->id }}</td>
                         <td>{{ $venda->valor_venda }}</td>
-                        <td>{{ $venda->clientes->cpf }}</td>
+                        <td>{{ $venda->cliente->nome }}</td>
                         <td>{{ (new DateTime($venda->data_venda))->format('d/m/Y') }}</td>
-                        <td>{{ $venda->modelo }}</td>
-                        <td>{{ $venda->nome }}</td>
+                        <td>{{ $venda->veiculo->modelo }}</td>
+                        <td>{{ $venda->funcionario->nome }}</td>
                         <td>
                             <a href="{{ route('vendas.show', $venda->id) }}" class="btn btn-info">Ver</a>
                             <a href="{{ route('vendas.edit', $venda->id) }}" class="btn btn-warning">Editar</a>
