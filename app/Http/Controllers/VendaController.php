@@ -7,12 +7,13 @@ use Illuminate\Http\Request;
 use App\Models\Venda;
 use App\Models\Cliente;
 use App\Models\Veiculo;
+use App\Models\Funcionario;
 
 class VendaController extends Controller
 {
     public function index()
     {
-        $vendas = Venda::all();
+        $vendas = Venda::paginate(10);
         return view('vendas.index', compact('vendas'));
     }
 
@@ -21,16 +22,23 @@ class VendaController extends Controller
     {
         $clientes = Cliente::all();
         $veiculos = Veiculo::all();
-        return view('vendas.create', compact('clientes', 'veiculos'));
+        $funcionarios = Funcionario::all();
+        return view('vendas.create', compact('clientes', 'veiculos', 'funcionarios'));
     }
 
     public function store(Request $request)
     {
+        $messages = [
+            'titulo.required' => 'É necessário preencher o campo título.',
+            'resumo.required'  => 'É necessário preencher o campo resumo.',
+        ];
+
         $request->validate([
             'data_venda' => 'required|string|max:255',
             'valor_venda' => 'required',
             'id_cliente' => 'required|exists:clientes,id',
             'id_veiculo' => 'required|exists:veiculos,id',
+            'id_funcionario' => 'required|exists:funcionarios,id',
         ]);
 
         Venda::create($request->all());
@@ -47,10 +55,15 @@ class VendaController extends Controller
     public function edit($id)
     {
         $venda = Venda::findOrFail($id);
-        return view('vendas.edit', compact('venda'));
+
+        $clientes = Cliente::all();
+        $veiculos = Veiculo::all();
+        $funcionarios = Funcionario::all();
+
+        return view('vendas.edit', compact('venda', 'clientes', 'funcionarios', 'veiculos'));
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, string $id)
     {
         $venda = Venda::findOrFail($id);
         // Atualize a venda com os dados do request aqui

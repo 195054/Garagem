@@ -22,6 +22,7 @@
                 @foreach ($clientes as $cliente)
                     <tr>
                         <td class="colunas">{{ $cliente->id }}</td>
+                        <td id="cpf">{{ $cliente->cpf }}</td>
                         <td id="nome">{{ $cliente->nome }}</td>
                         <td id="telefone">{{ $cliente->telefone }}</td>
                         <td>{{ $cliente->endereco }}</td>

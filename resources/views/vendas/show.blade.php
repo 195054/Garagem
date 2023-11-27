@@ -9,9 +9,9 @@
 
     <div class="container-venda form-venda">
         <h3>{{ $venda->valor_venda }}</h3>
-        <p><strong>Cliente:</strong> {{ $venda->cliente->nome }}</p>
-        <p><strong>Veiculo:</strong> {{ $venda->veiculo->modelo }}</p>
+        <p><strong>Cliente:</strong> {{ $venda->cliente }}</p>
+        <p><strong>Veiculo:</strong> {{ $venda->veiculo }}</p>
         <p><strong>Data da Venda:</strong> {{ $venda->data_venda}}</p>
         <a href="{{ route('vendas.index') }}" class="btn btn-secondary mt-4">Voltar</a>
-    </div>
+    </div> 
 </x-app-layout>

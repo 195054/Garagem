@@ -26,7 +26,6 @@
                         <td id="valor">{{ $veiculo->valor }}</td>
                         <td id="cor">{{ $veiculo->cor }}</td>
                         <td id="ano">{{ $veiculo->ano }}</td>
-                        <td>{{ $veiculo->ano }}</td>
                         <td>
                             <a href="{{ route('veiculos.show', $veiculo->id) }}" class="btn btn-info">Detalhes</a>
                             <a href="{{ route('veiculos.edit', $veiculo->id) }}" class="btn btn-warning">Editar</a>

@@ -11,23 +11,23 @@
       <div class="clienthe-content">
         <div class="clienthe-meta">
           <span class="clienthe-label">ID:</span>
-          <span class="clienthe-info">{{ $clientes->id }}</span>
+          <span class="clienthe-info">{{ $cliente->id }}</span>
         </div>
         <div class="clienthe-meta">
           <span class="clienthe-label">CPF:</span>
-          <span class="clienthe-info">{{ $clientes->cpf }}</span>
+          <span class="clienthe-info">{{ $cliente->cpf }}</span>
         </div>
         <div class="clienthe-meta">
           <span class="clienthe-label">Nome:</span>
-          <span class="clienthe-info">{{ $clientes->nome }}</span>
+          <span class="clienthe-info">{{ $cliente->nome }}</span>
         </div>
         <div class="clienthe-meta">
           <span class="clienthe-label">Endereço:</span>
-          <span class="clienthe-info">{{ $clientes->endereco }}</span>
+          <span class="clienthe-info">{{ $cliente->endereco }}</span>
         </div>
         <div class="clienthe-meta">
           <span class="clienthe-label">Telefone:</span>
-          <span class="clienthe-info">{{ $clientes->telefone }}</span>
+          <span class="clienthe-info">{{ $cliente->telefone }}</span>
         </div>
       </div>
       <a href="{{ route('clientes.index') }}" class="btn-return">Voltar</a>

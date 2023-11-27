@@ -36,6 +36,15 @@
                     @endforeach
                 </select>
             </div>
+            <div class="form-group">
+                <label for="id_funcionario">Funcionario</label>
+                <select class="form-control" name="id_funcionario" required>
+                    <option value="">Selecione um funcionario</option>
+                    @foreach($funcionarios as $funcionario)
+                        <option value="{{ $funcionario->id }}">{{ $funcionario->nome}}</option>
+                    @endforeach
+                </select>
+            </div>
             <button type="submit" class="btn btn-primary">Salvar</button>
         </form>
     </div>

@@ -1,14 +1,43 @@
 <x-app-layout>
-    <div class="author-details-layout">
+    <head>
         <link rel="stylesheet" href="{{ asset('css/veiculos/show.css') }}">
-        <h1>Detalhes do Veiculo</h1>
-        <ul>
-            <li><strong>ID:</strong> {{ $veiculos->id }}</li>
-            <li><strong>Placa:</strong> {{ $veiculos->placa }}</li>
-            <li><strong>Modelo:</strong> {{  $veiculos->modelo }}</li>
-            <li><strong>Marca:</strong> {{  $veiculos->marca }}</li>
-            <li><strong>Valor:</strong> {{  $veiculos->valor }}</li>
-        </ul>
-        <a href="{{ route('veiculos.index') }}" class="btn btn-secondary">Voltar</a>
-    </div>
-</x-app-layout>
+    </head>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+            {{ __('Veiculos') }}
+        </h2>
+    </x-slot>
+    <section class="veichulos-details">
+      <div class="veichulos-content">
+        <div class="veichulos-meta">
+          <span class="veichulos-label">ID:</span>
+          <span class="veichulos-info">{{ $veiculos->id }}</span>
+        </div>
+        <div class="veichulos-meta">
+          <span class="veichulos-label">Placa:</span>
+          <span class="veichulos-info">{{ $veiculos->placa }}</span>
+        </div>
+        <div class="veichulos-meta">
+          <span class="veichulos-label">Modelo:</span>
+          <span class="veichulos-info">{{ $veiculos->modelo }}</span>
+        </div>
+        <div class="veichulos-meta">
+          <span class="veichulos-label">Marca:</span>
+          <span class="veichulos-info">{{ $veiculos->marca }}</span>
+        </div>
+        <div class="veichulos-meta">
+          <span class="veichulos-label">Valor:</span>
+          <span class="veichulos-info">{{ $veiculos->valor }}</span>
+        </div>
+        <div class="veichulos-meta">
+          <span class="veichulos-label">Cor:</span>
+          <span class="veichulos-info">{{ $veiculos->cor }}</span>
+        </div>
+        <div class="veichulos-meta">
+          <span class="veichulos-label">Ano:</span>
+          <span class="veichulos-info">{{ $veiculos->ano }}</span>
+        </div>
+      </div>
+      <a href="{{ route('veiculos.index') }}" class="btn-return">Voltar</a>
+    </section>
+  </x-app-layout>
